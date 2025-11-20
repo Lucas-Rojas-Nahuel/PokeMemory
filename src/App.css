@@ -1,0 +1,17 @@
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-fond {
+  background-image: url("https://i.pinimg.com/1200x/04/e1/ad/04e1adde3e88f8da738de393c4b2d014.jpg");
+  background-repeat: no-repeat;
+}
+
+.pokeball-logo {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
