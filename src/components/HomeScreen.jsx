@@ -56,6 +56,7 @@ export default function HomeScreen() {
                   onClick={() => {
                     localStorage.removeItem("pokemonCache");
                     localStorage.removeItem("randomPokemonList");
+                    setCurrentScore(0);
                     setIsMenu(!isMenu);
                   }}
                   className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-sky-500 hover:bg-red-400 text-white text-base font-bold leading-normal tracking-wide transition-all  delay-100 duration-160   hover:scale-105"
