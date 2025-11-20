@@ -55,7 +55,8 @@ export default function ListPokeCard({
         return prev;
       } else {
         setIsRepeated(false);
-        setCurrentScore(currentScore++);
+        setCurrentScore((prev) => prev + 1);
+
         return [...prev, name];
       }
     });
