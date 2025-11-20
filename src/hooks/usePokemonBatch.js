@@ -38,9 +38,8 @@ export function usePokemonBatch(allPokemonNames) {
       // 3️⃣ Fetch solo si falta en cache
       const requests = randomList.map(async (name) => {
         if (cacheRef.current[name]) {
-            return cacheRef.current[name];
+          return cacheRef.current[name];
         }
-        console.log("estoy aca");
 
         const apiName = normalizePokemonName(name);
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${apiName}`);

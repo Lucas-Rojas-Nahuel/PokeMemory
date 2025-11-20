@@ -1,15 +1,22 @@
-import React, { useState } from "react";
 import { MdOutlineGroup } from "react-icons/md";
 import { IoGameControllerSharp } from "react-icons/io5";
 import { CiShare2 } from "react-icons/ci";
 import MainGameScreen from "./MainGameScreen";
 import EndGameScreen from "./EndGameScreen";
 
+import { useGameState } from "../hooks/useGameState";
+
 export default function HomeScreen() {
-  const [isMenu, setIsMenu] = useState(false);
-  const [isRepeated, setIsRepeated] = useState(false);
-  const [currentScore, setCurrentScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
+  const {
+    isMenu,
+    setIsMenu,
+    isRepeated,
+    setIsRepeated,
+    currentScore,
+    setCurrentScore,
+    bestScore,
+    setBestScore,
+  } = useGameState();
   return (
     <div className="layout-container flex h-full grow flex-col">
       <main className="flex-1 main-fond bg-cover bg-center">
@@ -42,7 +49,8 @@ export default function HomeScreen() {
                   </h1>
                 </header>
                 <p className="max-w-xl   text-[20px] font-medium leading-normal text-gray-100 @[480px]:text-lg">
-                  Pon a prueba tu memoria y encuentra 20 Pokémon distintos. ¿Podrás atraparlos a todos?
+                  Pon a prueba tu memoria y encuentra 20 Pokémon distintos.
+                  ¿Podrás atraparlos a todos?
                 </p>
                 <button
                   onClick={() => {
@@ -72,7 +80,8 @@ export default function HomeScreen() {
           </a>
         </div>
         <p className="text-sm font-normal leading-normal text-slate-500 ">
-        Juego creado por ©2025 Lucas Rojas &#123;Dev&#125;. Pokémon es propiedad de Nintendo, Creatures Inc. y GAME FREAK Inc.
+          Juego creado por ©2025 Lucas Rojas &#123;Dev&#125; . Pokémon es
+          propiedad de Nintendo, Creatures Inc. y GAME FREAK Inc.
         </p>
       </footer>
     </div>
